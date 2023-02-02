@@ -1,0 +1,28 @@
+# Ignore All
+*
+
+# Un-Ignore all files (with extension) and folders
+# This leaves binary files without extension excluded
+!*.*
+!*/
+
+# Ignore files by extension
+*.a
+*.i
+*.i2
+*.bak
+*.tmp
+*.debug
+
+# Ignore folders
+/experiments/
+/temp/
+/samples/
+/sandbox/
+
+# Ignore Build folders
+.bmx/
+
+# Ignore Temp and Working notes
+status.txt
+
