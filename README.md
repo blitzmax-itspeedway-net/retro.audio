@@ -55,7 +55,7 @@ import retro.audio
 ```
 Local preset:Int = Rand(0,65535)
 Local channel:TChannel = AllocChannel()
-Local sound:TSound = SFXR.LoadPreset( effect, preset )
+Local sound:TSound = SFXR.LoadPreset( SFXR_EXPLOSION, preset )
 PlaySound( sound, channel )
 ```
 
