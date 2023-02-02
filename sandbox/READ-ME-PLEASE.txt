@@ -1,0 +1,7 @@
+
+This folder contains experiments that are not intended for use.
+
+By all means help improve the code in here, but dont expect it to be perfect!
+
+Many Thanks
+Scaremonger

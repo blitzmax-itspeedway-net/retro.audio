@@ -63,15 +63,15 @@ You can also load all your preset TSounds in advance and simply play them
 
 # SFXR Presets
 
-SFXR_COIN
-SFXR_LASER
-SFXR_EXPLOSION
-SFXR_POWERUP
-SFXR_HURT
-SFXR_JUMP
-SFXR_BLIP
-SFXR_SHOOT  (Alias for SFXR_LASER)
-SFXR_HIT	(Alias for SFXR_HURT)
-SFXR_SELECT	(Alias for SFXR_BLIP)
+* SFXR_COIN
+* SFXR_LASER
+* SFXR_EXPLOSION
+* SFXR_POWERUP
+* SFXR_HURT
+* SFXR_JUMP
+* SFXR_BLIP
+* SFXR_SHOOT (Alias for SFXR_LASER)
+* SFXR_HIT (Alias for SFXR_HURT)
+* SFXR_SELECT (Alias for SFXR_BLIP)
 
 
