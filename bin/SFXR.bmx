@@ -8,6 +8,11 @@
 
 Type TSFXRSound Extends TSoloudSound	' Which extends TSound
 
+	Method New( preset:Int, seed:Int )
+		_sound = New TSLSfxrPlus
+		If _sound; TSLSfxrPlus(_sound).loadPreset( preset, seed )		
+	End Method
+
 	Method LoadPreset:TSFXRSound( preset:Int, seed:Int )
 		_sound = New TSLSfxrPlus
 		If _sound; TSLSfxrPlus(_sound).loadPreset( preset, seed )

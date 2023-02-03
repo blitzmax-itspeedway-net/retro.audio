@@ -1,7 +1,7 @@
 # Module retro.audio
 A set of tools and functions for creating retro sounds in Blitzmax
 
-Version 1.1
+Version 1.11
 
 # Dependencies
 * [BlitzMax-NG](https://blitzmax.org/downloads/)
@@ -51,17 +51,22 @@ Version 1.1
 import retro.audio
 ```
 
-# Playing an SFXR Preset
+# SFXR Presets
+SXFR provides 7 preset sound effects and each one has 65536 combinations. These are loaded into a TSound object using loadPreset(): 
 ```
-Local preset:Int = Rand(0,65535)
+Local effect:Int = Rand(0,65535)
+Local sound:TSound = New TSFXRSound.LoadPreset( SFXR_EXPLOSION, effect )
+
 Local channel:TChannel = AllocChannel()
-Local sound:TSound = New TSFXRSound.LoadPreset( SFXR_EXPLOSION, preset )
 PlaySound( sound, channel )
 ```
 
-You can also load all your preset TSounds in advance and simply play them
+You can also create a prefix using new:
+```
+Local sound:TSound = New TSFXRSound( SFXR_EXPLOSION, effect )
+```
 
-# SFXR Presets
+The 7 available preets (and three aliases) are:
 
 * SFXR_COIN
 * SFXR_LASER
@@ -74,7 +79,7 @@ You can also load all your preset TSounds in advance and simply play them
 * SFXR_HIT (Alias for SFXR_HURT)
 * SFXR_SELECT (Alias for SFXR_BLIP)
 
-# SXFR resource files
+# SXFR Resource files
 
 SFXR can save a sound definition to a .sfxr file. These can be loaded like this:
 
