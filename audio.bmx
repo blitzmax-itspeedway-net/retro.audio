@@ -1,10 +1,6 @@
 '   Retro Audio Module
 '   (c) Copyright Si Dunford, September 2022, All Rights Reserved. 
-'   VERSION: 1.0
-
-'   CHANGES:
-'   19 Sep 2022  Converted to a Module
-'
+'   VERSION: 1.1
 
 SuperStrict
 
@@ -15,6 +11,9 @@ ModuleInfo "Copyright Si Dunford, Sep 2022, All Rights Reserved"
 
 ModuleInfo "Version 1.00, 19 Sep 2022"
 ModuleInfo "Implemented SFXR presets using soloud"
+
+ModuleInfo "Version 1.10, 03 Feb 2022"
+ModuleInfo "SFXR Factory becomes TSFXRSound"
 
 Import Audio.AudioSDL
 

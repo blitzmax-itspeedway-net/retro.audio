@@ -1,6 +1,6 @@
 ' 	SFXR Toolkit Example
 '   (c) Copyright Si Dunford, September 2022, All Rights Reserved. 
-'   VERSION: 1.0
+'   VERSION: 1.1
 
 SuperStrict
 
@@ -38,10 +38,10 @@ Function DoSound( Preset:Int=-1, Text:String="" )
 	If Text<>"" soundName = Text
 	If preset<>-1 soundID = preset
 	'
-	PlaySound( SFXR.LoadPreset( soundID, Seed ) )
+	PlaySound( New TSFXRSound.LoadPreset( soundID, Seed ) )
 	bmxcode = []
 	bmxcode :+ [ "Import retro.audio" ]
-	bmxcode :+ [ "Local sound:TSound = SFXR.LoadPreset( "+soundName+", "+seed+" )" ]
+	bmxcode :+ [ "Local sound:TSound = New TSFXRSound.LoadPreset( "+soundName+", "+seed+" )" ]
 	bmxcode :+ [ "Local channel:TChannel = AllocChannel()" ]
 	bmxcode :+ [ "PlaySound( sound, channel )" ]
 	bmxcode :+ [ "While ChannelPlaying( channel ); Wend" ]
@@ -51,10 +51,10 @@ End Function
 ' Plays a preset sound using SFXR
 Function Sound( Preset:Int, Seed:Int, Text:String )
 	Local ch:TChannel = AllocChannel()
-	PlaySound( SFXR.LoadPreset( Preset, Seed ) )
+	PlaySound( New TSFXRSound.LoadPreset( Preset, Seed ) )
 	bmxcode = []
 	bmxcode :+ [ "Import retro.audio" ]
-	bmxcode :+ [ "Local sound:TSound = SFXR.LoadPreset( "+Text+", "+seed+" )" ]
+	bmxcode :+ [ "Local sound:TSound = New TSFXRSound.LoadPreset( "+Text+", "+seed+" )" ]
 	bmxcode :+ [ "Local channel:TChannel = AllocChannel()" ]
 	bmxcode :+ [ "PlaySound( sound, channel )" ]
 	bmxcode :+ [ "While ChannelPlaying( channel ); Wend" ]

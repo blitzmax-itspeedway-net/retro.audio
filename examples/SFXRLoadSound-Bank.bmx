@@ -1,6 +1,6 @@
 ' 	SFXR LoadSound( TBank ) Example
 '   (c) Copyright Si Dunford, September 2022, All Rights Reserved. 
-'   VERSION: 1.0
+'   VERSION: 1.1
 
 ' This example shows how an SFXR resource file can be loaded from a TBank
 
@@ -12,7 +12,7 @@ AppTitle="SFXR LoadSound( TBank ) Example"
 Graphics 320, 200
 
 Local bank:TBank = New TBank.Load( "powerup.sfxr" )
-Local sound:TSound = SFXR.LoadSound( bank )
+Local sound:TSound = New TSFXRsound.Load( bank )
 
 Repeat
     Cls

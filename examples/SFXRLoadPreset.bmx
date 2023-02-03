@@ -1,6 +1,6 @@
 ' 	SFXR LoadPreset() Example
 '   (c) Copyright Si Dunford, September 2022, All Rights Reserved. 
-'   VERSION: 1.0
+'   VERSION: 1.1
 
 SuperStrict
 
@@ -13,7 +13,7 @@ Global preset:Int = 0
 Function play( effect:Int )
 	preset = Rand(0,65535)
 	Local channel:TChannel = AllocChannel()
-	Local sound:TSound = SFXR.LoadPreset( effect, preset )
+	Local sound:TSound = New TSFXRsound.LoadPreset( effect, preset )
 	PlaySound( sound, channel )
 End Function
 

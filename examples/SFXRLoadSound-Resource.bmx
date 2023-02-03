@@ -1,6 +1,6 @@
 ' 	SFXR LoadSound( File ) Example
 '   (c) Copyright Si Dunford, September 2022, All Rights Reserved. 
-'   VERSION: 1.0
+'   VERSION: 1.1
 
 ' This example shows how an sxfr resource file (Generated in SFXR)
 ' can be played using Soload SFXR
@@ -12,7 +12,7 @@ Import retro.audio
 AppTitle="SFXR LoadSound( Resource ) Example"
 Graphics 320, 200
 
-Local sound:TSound = SFXR.LoadSound( "powerup.sfxr" )
+Local sound:TSound = New TSFXRSound.Load( "powerup.sfxr" )
 
 Repeat
     Cls
